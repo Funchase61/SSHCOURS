@@ -32,6 +32,10 @@ whoami
 ```
 Now that you know you're connected, let's try to create an username to navigate as yourself in your vps.
 So you'll need to add a new user to your vps with a command and give it a name.
+```
+adduser "name-user"
+```
+it will ask you a new password then some informations about you. that's not mandatory to fill everything u can just press enter until your account is created.
 
 
 
