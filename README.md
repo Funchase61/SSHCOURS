@@ -10,7 +10,12 @@
 - [Resources](#Resources)
   
 # Introduction
+
 To start somewhere, here we're gonna talk about creating a SSH server on a distant server (Ionos servers on Ubuntu) and learn how to protect its datas against cyber villains by using different way to communicate with it and protecting connections.
+
+# Manipulations list
+
+## 1. Connecting to your server
 
 > At that moment you should have created a server on ionos, it can possibly be done with another provider or your own vps
 
@@ -36,10 +41,6 @@ So you'll need to add a new user to your vps with a command and give it a name.
 adduser "name-user"
 ```
 it will ask you a new password then some informations about you. that's not mandatory to fill everything, you can just press enter until your account is created.
-
-
-
-# Manipulations list
 
 # Problems encountered and solutions
 
