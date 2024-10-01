@@ -10,7 +10,7 @@
 - [Resources](#Resources)
   
 # Introduction
-To start somewhere, here we're gonna talk about creating a SSH server on a distant server (Ionos servers on Ubuntu) and learn how to protect its datas against cyber villains by using different way to communicate with it and protecting connexions.
+To start somewhere, here we're gonna talk about creating a SSH server on a distant server (Ionos servers on Ubuntu) and learn how to protect its datas against cyber villains by using different way to communicate with it and protecting connections.
 
 > At that moment you should have created a server on ionos, it can possibly be done with another provider or your own vps
 
@@ -22,7 +22,15 @@ Now proceed like that :
 ssh root@server_adress_ip
 ```
 Then enter your password to acces it. Wonderfull ! your now connected as `root`[^1] in your server !
-It should appear like that :
+![It should appear like that :](image.jpg)
+
+You can try some command to test the connection :
+```
+ls
+pwd
+whoami 
+```
+Now that you know you're connected, let's try to create an username to
 
 
 
