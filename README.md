@@ -40,11 +40,11 @@ So you'll need to add a new user to your vps with a command and give it a name.
 ```
 adduser "name-user"
 ```
-it will ask you a new password then some informations about you. that's not mandatory to fill everything, you can just press enter until your account is created.
+It will ask you a new password then some informations about you. that's not mandatory to fill everything, you can just press enter until your account is created.
 
 ## 2. Generate SSH Keys
 
-Now you'll need to create SSH keys 
+Now you'll need to create SSH keys to create an unique authentification for your account and deny any other desktop to connect to your account on your server without those keys,
 
 
 # Problems encountered and solutions
