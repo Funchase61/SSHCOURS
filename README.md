@@ -42,6 +42,11 @@ adduser "name-user"
 ```
 it will ask you a new password then some informations about you. that's not mandatory to fill everything, you can just press enter until your account is created.
 
+## 2. Generate SSH Keys
+
+Now you'll need to create SSH keys 
+
+
 # Problems encountered and solutions
 
 # Theorical analysis
