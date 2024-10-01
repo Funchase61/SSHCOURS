@@ -51,6 +51,7 @@ ssh-keygen -t ed25519
 ```
 It will create 2 keys, one public and one private. The private one will stay in your desktop and will serve as your authentification pass. The public one will be sent to your server and serve as an exemple of what it should accept as "keys" from any users. So now how to send that public one to the server
 ## 3. Scp and Sftp transfer
+## 4. SSH pipeline 
 
 
 # Problems encountered and solutions
