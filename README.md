@@ -44,7 +44,13 @@ It will ask you a new password then some informations about you. that's not mand
 
 ## 2. Generate SSH Keys
 
-Now you'll need to create SSH keys to create an unique authentification for your account and deny any other desktop to connect to your account on your server without those keys,
+Now you'll need to create SSH keys to create an unique authentification for your account and deny any other desktop to connect to your account on your server without those keys. How to create Keys ? you'll need that command to generate it :
+
+```
+ssh-keygen -t ed25519
+```
+It will create 2 keys, one public and one private. The private one will stay in your desktop and will serve as your authentification pass. The public one will be sent to your server and serve as an exemple of what it should accept as "keys" from any users. So now how to send that public one
+
 
 
 # Problems encountered and solutions
