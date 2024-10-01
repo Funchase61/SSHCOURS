@@ -30,9 +30,8 @@ ls
 pwd
 whoami 
 ```
-Now that you know you're connected, let's try to create an username to
-
-
+Now that you know you're connected, let's try to create an username to navigate as yourself in your vps.
+So you'll need to add a new user to your vps with a command and give it a name.
 
 
 
