@@ -119,11 +119,18 @@ put file.txt
 And Voila ! now you have two file.txt in `/home/username/`
 You'll see that sftp is a more versatile way to transfer files and directories
 
+## 4. Creating a SSH Tunnel and redirecting ports
 
+Using SSH tunneling and port forwarding is beneficial because it secures communication between your local machine and a remote server. Here’s why it’s useful:
 
+All data transmitted through the tunnel is encrypted via SSH, protecting sensitive information from being intercepted.
 
+You can securely access services (like web applications or databases) running on a remote server, even if those services are not directly exposed to the internet.
 
-## 4. Creating a SSH pipeline and redirecting ports
+SSH tunneling can help you access remote services through restrictive firewalls by routing traffic through a secure, encrypted connection.
+
+In short, it adds a layer of security and flexibility when accessing remote resources.
+
 ## 5. Securing SHH server
 
 
