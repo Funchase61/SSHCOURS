@@ -103,21 +103,21 @@ scp file.txt user-name@server_adress_ip:/home/username/
 ```
 You can verify on your server if it worked by searching with a command we used sooner `ls`.
 
-That's everything you need to know about SCP. now time to see SFTP !
+That's everything you need to know about SCP. Now time to see SFTP !
 
 Connect to your remote server using SFTP : 
 
 ```
 sftp user-name@server_adress_ip
 ```
-now you can freely navigate into your directories with `cd` and  `ls` on your remote server, when you are in the right directory where you want to send your file transfer it with this command :
+Now you can freely navigate into your directories with `cd` and  `ls` on your remote server, when you are in the right directory where you want to send your file transfer it with this command :
 
 ```
 put file.txt
 ```
 
-and Voila ! now you have two file.txt in `/home/username/`
-you'll see that sftp is a more versatile way to transfer files and directories
+And Voila ! now you have two file.txt in `/home/username/`
+You'll see that sftp is a more versatile way to transfer files and directories
 
 
 
