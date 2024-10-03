@@ -280,7 +280,9 @@ Everystep from Port forwarding, installing Fail2ban, Allow and deny some ports b
 Here it's only a childplay but imagine if we talk about datas center from a hospital, it could be a disaster that's why we need to learn to protect ourselves even more and it starts with a good password ! :)
 
 # Resources
+[Wikipedia](https://www.wikipedia.org/)
 
--[Wikipedia](#https://www.wikipedia.org/)
--[ChatGPT](#https://openai.com/chatgpt/) Warning ! : Use it as a big dictionary, it's really powerfull and you can learn even faster with it
+[ChatGPT](https://openai.com/chatgpt/) 
+
+Warning ! : Use it as a big dictionary, it's really powerfull and you can learn even faster with it
 
