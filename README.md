@@ -60,13 +60,13 @@ So you'll proceed like that :
 ```
 sudo nano /etc/ssh/sshd_config
 ```
-after that you will be in the ssh's configuration file, there you can allow different ports and change some rules but we will see that a bit later. for now we want to make authentification by password unactive.
+After that you will be in the ssh's configuration file, there you can allow different ports and change some rules but we will see that a bit later. for now we want to make authentification by password unactive.
 
-find the line :
+Find the line :
 ```
 #PasswordAuthentification yes
 ```
-then change it for a "no" and delete the " # " to make it work. # is a sign to make the line you write as a commentary and not a code line so it will not be recognized as an instruction. Don't forget to save when you're quitting this
+Then change it for a "no" and delete the " # " to make it work. # is a sign to make the line you write as a commentary and not a code line so it will not be recognized as an instruction. Don't forget to save when you're quitting this
 
 Now restart the service ssh to update it :
 
@@ -131,7 +131,7 @@ SSH tunneling can help you access remote services through restrictive firewalls 
 
 In short, it adds a layer of security and flexibility when accessing remote resources.
 
-we will try to redirect local port 8080 to the remote server's port 80 : The command for this is :
+We will try to redirect local port 8080 to the remote server's port 80 : The command for this is :
 ```
 ssh -L 8080:localhost:80 user-name@server_adress_ip
 ```
@@ -145,7 +145,7 @@ So you need to install one, there we will use Nginx :
 sudo apt install nginx
 ```
 
-remember to do this on the remote server and not in local of your desktop.
+Remember to do this on the remote server and not in local of your desktop.
 
 It should work now ! you did create a port forwarding well done ! 
 
@@ -161,7 +161,7 @@ Now how it's done :
 ```
 sudo nano /etc/ssh/sshd_config
 ```
-we're returning in the menu we saw before and there, we will change the port listening by our server, it's written :
+We're returning in the menu we saw before and there, we will change the port listening by our server, it's written :
 ```
 #Port 22
 ```
@@ -169,7 +169,7 @@ So you will add one rule `Port 2222`
 
 Save and quit and restart service ssh like we saw before.
 
-it's time to introduce you something else before trying to connect to that port, UFW !
+It's time to introduce you something else before trying to connect to that port, UFW !
 
 Ufw is what we call a firewall it allows or deny connection to certain ports, it's needed to go further ! Install Ufw on the remote server :
 
@@ -181,24 +181,24 @@ Now that it is installed here is some commands to use it :
 ```
 sudo ufw status
 ```
-it will show you every rules about your ports you denied or allowed by ufw
+It will show you every rules about your ports you denied or allowed by ufw
 
 ```
 sudo ufw reload
 ```
-this one will reload ufw and apply your changes
+This one will reload ufw and apply your changes
 
 ```
 sudo ufw enable(or disable)
 ```
-i think i don't really need to explain you what it will do but .. ! we never know ! enable : will active ufw and disable : will make ufw unactive
+I think i don't really need to explain you what it will do but .. ! we never know ! enable : will active ufw and disable : will make ufw unactive
 
-and the last and the most important :
+And the last and the most important :
 
 ```
 sudo ufw allow (anyport)
 ```
-it will allow a port you choosing to.
+It will allow a port you choosing to.
 
 Comingback to what we were doing before installing ufw. now we need to allow the service itself SSH and the port needed so here 2222 :
 
@@ -206,13 +206,13 @@ Comingback to what we were doing before installing ufw. now we need to allow the
 sudo ufw allow 2222
 sudo ufw allow 'OpenSSH'
 ```
-restart the service ssh with the command we saw before then try to connect to your server using the port we allowed, remember to quit your server to do it:
+Restart the service ssh with the command we saw before then try to connect to your server using the port we allowed, remember to quit your server to do it:
 
 ```
 ssh -p 2222 user-name@server_adress_ip
 ```
 
-well done your now connected to your server by the port 2222 !
+Well done your now connected to your server by the port 2222 !
 If it didn't work let's read [Problems encountered and solutions](#Problems-encountered-and-solutions)
 
 Now that we're connected to another port it gives a better protection BUT we need even more protection to our server, hackers are smart ! so we will now install Fail2ban ! but what it is ?
@@ -224,7 +224,7 @@ Install Fail2ban :
 ```
 sudo apt install fail2ban
 ```
-now that it is installed you need to make it work for ssh service and precise what port to protect from brute forcing :
+Now that it is installed you need to make it work for ssh service and precise what port to protect from brute forcing :
 ```
 sudo nano /etc/fail2ban/jail.local
 ```
@@ -236,7 +236,7 @@ enabled = true
 port = 2222
 ```
 
-save & quit and like every other application we used restart it : 
+Save & quit and like every other application we used restart it : 
 
 ```
 sudo systemctl restart fail2ban
